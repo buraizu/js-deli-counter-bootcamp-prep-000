@@ -1,10 +1,16 @@
 
 var katzDeliLine = [];
 
+var counter = 0;
+
 function takeANumber(katzDeliLine, name) {
-  katzDeliLine.push(name);
-  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
+   katzDeliLine.push(name);
+   counter++
+  return `Welcome, ${name}. You are number ${counter} in line.`
 }
+
+takeANumber(katzDeliLine, 'Frank')
+
 
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length === 0) {
@@ -14,9 +20,9 @@ function nowServing(katzDeliLine) {
   }
 }
 
-var displayLine = [];
 
 function currentLine(katzDeliLine) {
+  let displayLine = [];
   if (katzDeliLine.length === 0) {
     return `The line is currently empty.`;
   } else {
@@ -25,6 +31,7 @@ function currentLine(katzDeliLine) {
     }
     return `The line is currently:${displayLine}`;
   }
+  
 }
 
 line.push(` `+[i+1]+`. `  + katzDeli[i])
